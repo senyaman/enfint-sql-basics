@@ -1,0 +1,77 @@
+SELECT 
+  course_id, 
+  course_name 
+FROM 
+  courses 
+WHERE 
+  start_date <= '12-12-2021'
+  
+
+SELECT 
+  client_id, 
+  client_name 
+FROM 
+  clients 
+WHERE 
+  address LIKE '%a%'
+  
+
+SELECT 
+  count(*) AS total_participants 
+FROM 
+  participants
+  
+SELECT 
+  count(*) AS total_courses 
+FROM 
+  courses 
+  
+SELECT 
+  count(*) AS total_teachers 
+FROM 
+  teachers
+  
+  
+SELECT 
+  MAX(course_length) AS 'longest course' 
+FROM 
+  course
+  
+
+SELECT 
+  MIN(course_length) AS 'shortest course' 
+FROM 
+  courses 
+WHERE 
+  level = 3
+  
+
+SELECT 
+  paricipants.*, 
+  client.client_id, 
+  client.client_name 
+FROM 
+  participants 
+INNER JOIN clients ON participant.client_id = clients.client_id
+
+
+SELECT 
+  teacher.first_name, 
+  teacher.last_name, 
+  teacher.phone_no 
+FROM 
+  course
+INNER JOIN teacher ON course.teacher_id = teacher.teacher_id
+WHERE 
+  course_id = 152
+
+
+SELECT 
+  course_name teacher_first_name teacher_last_name participant.first_name, 
+  participant.last_name 
+FROM 
+  course 
+INNER JOIN participant ON course.course_id = participant_course_id 
+INNER JOIN teacher ON teacher.teacher_id = course.course_id 
+WHERE 
+  course_id = 152
