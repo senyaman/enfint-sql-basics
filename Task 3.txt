@@ -2,7 +2,7 @@ SELECT
   course_id, 
   course_name 
 FROM 
-  courses 
+  course 
 WHERE 
   start_date <= '12-12-2021'
   
@@ -11,7 +11,7 @@ SELECT
   client_id, 
   client_name 
 FROM 
-  clients 
+  client 
 WHERE 
   address LIKE '%a%'
   
@@ -19,40 +19,40 @@ WHERE
 SELECT 
   count(*) AS total_participants 
 FROM 
-  participants
+  participant
   
 SELECT 
   count(*) AS total_courses 
 FROM 
-  courses 
+  course
   
 SELECT 
   count(*) AS total_teachers 
 FROM 
-  teachers
+  teacher
   
   
 SELECT 
-  MAX(course_length) AS 'longest course' 
+  MAX(course_length_weeks) AS 'longest course' 
 FROM 
   course
   
 
 SELECT 
-  MIN(course_length) AS 'shortest course' 
+  MIN(course_length_weeks) AS 'shortest course' 
 FROM 
-  courses 
+  course 
 WHERE 
-  level = 3
+  level = 'F6'
   
 
 SELECT 
-  paricipants.*, 
+  paricipant.*, 
   client.client_id, 
   client.client_name 
 FROM 
-  participants 
-INNER JOIN clients ON participant.client_id = clients.client_id
+  participant 
+INNER JOIN client ON participant.client = client.client_id
 
 
 SELECT 
@@ -61,17 +61,18 @@ SELECT
   teacher.phone_no 
 FROM 
   course
-INNER JOIN teacher ON course.teacher_id = teacher.teacher_id
+INNER JOIN teacher ON course.teacher = teacher.teacher_id
 WHERE 
-  course_id = 152
+  course_id = 10
 
 
+--check logic!
 SELECT 
-  course_name teacher_first_name teacher_last_name participant.first_name, 
+  course_name, teacher.first_name, teacher.last_name, participant.first_name, 
   participant.last_name 
 FROM 
   course 
-INNER JOIN participant ON course.course_id = participant_course_id 
-INNER JOIN teacher ON teacher.teacher_id = course.course_id 
+INNER JOIN takes_course ON course.course_id = takes_course.course_id 
+INNER JOIN teacher ON teacher.teacher_id = course.teacher 
 WHERE 
-  course_id = 152
+  course_id = 13
