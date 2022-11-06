@@ -1,188 +1,50 @@
-INSERT INTO regions 
-VALUES 
-  (1, 'Africa');
-INSERT INTO regions 
-VALUES 
-  (2, 'Europe');
-INSERT INTO regions 
-VALUES 
-  (3, 'South America');
-INSERT INTO regions 
-VALUES 
-  (4, 'Asia');
+INSERT INTO teacher VALUES
+(1,  'Gift', 'Masenya', 'ENG', 'NSOTHO', '1997-05-05', 87956, '0326954785'),
+(2, 'Michael',  'Salas',  'ALG', 'AMH',  '1987-05-20', 36263, '0125236965'), 
+(3, 'David', 'Lewis',  'AMH', 'ENG', '1981-07-15', 98632, '0326963265'),
+(4, 'Nicholas',  'Morgan', 'ARN', 'ASL', '1988-01-22',  14587, '01252458586'),
+(5, 'Andrea', 'Cooper', 'BAD', 'BAK', '1992-11-27',  88525, '0326369658'),
+(6, 'Stephanie', 'Wheeler', 'BAQ', 'BAS', '1990-09-16',  22323, '0158696325');
 
-INSERT INTO countries 
-VALUES 
-  ('SA', 'South Africa', 5);
-INSERT INTO countries 
-VALUES 
-  ('US', 'United States', 7);
-INSERT INTO countries 
-VALUES 
-('GRM', 'Germany', 9);
-INSERT INTO countries 
-VALUES 
-  ('DM', 'Denmark', 11);
 
-INSERT INTO locations 
-VALUES 
-  (
-    1000, '1297 Via Cola di Rie', '00989', 
-    'Roma', NULL, 'IT'
-  );
-INSERT INTO locations 
-VALUES 
-  (
-    1100, '93091 Calle della Testa', 
-    '10934', 'Venice', NULL, 'IT'
-  );
-INSERT INTO locations 
-VALUES 
-  (
-    1200, '2017 Shinjuku-ku', '1689', 
-    'Tokyo', 'Tokyo Prefecture', 'JP'
-  );
-INSERT INTO locations 
-VALUES 
-  (
-    1300, '9450 Kamiya-cho', '6823', 'Hiroshima', 
-    NULL, 'JP'
-  );
 
-INSERT INTO departments 
-VALUES 
-  (10, 'Administration', 200, 1700);
-INSERT INTO departments 
-VALUES 
-  (20, 'Marketing', 201, 1800);
-INSERT INTO departments 
-VALUES 
-  (30, 'Purchasing', 114, 1700);
-INSERT INTO departments 
-VALUES 
-  (40, 'Human Resources', 203, 2400);
-INSERT INTO departments 
-VALUES 
-  (50, 'Shipping', 121, 1500);
+INSERT INTO client VALUES
+(1234, 'Katherine', '3889 Hornor Avenue', 'Mining'),
+(5678, 'Joseph', '97 Emily Renzelli Boulevard', 'Insurance'),
+(9659, 'Carrie',  '2918 County Line Road', 'Health Care'),
+(2365, 'Samuel',  '1877 Maud Street', 'Education'),
+(4785, 'Walker', '2056 Lincoln Drive', 'Technology');
 
-INSERT INTO jobs 
-VALUES 
-  (
-    'AD_PRES', 'President', 20080, 40000
-  );
-INSERT INTO jobs 
-VALUES 
-  (
-    'AD_VP', 'Administration Vice President', 
-    15000, 30000
-  );
-INSERT INTO jobs 
-VALUES 
-  (
-    'AD_ASST', 'Administration Assistant', 
-    3000, 6000
-  );
-INSERT INTO jobs 
-VALUES 
-  (
-    'FI_MGR', 'Finance Manager', 8200, 
-    16000
-  );
 
-INSERT INTO employees 
-VALUES 
-  (
-    100, 
-    'Gift', 
-    'Masenya', 
-    'SKING', 
-    '515.123.4567', 
-    TO_DATE('17-06-2003', 'dd-MM-yyyy'), 
-    'AD_PRES', 
-    24000, 
-    NULL, 
-    NULL, 
-    90
-  );
-INSERT INTO employees 
-VALUES 
-  (
-    101, 
-    'Adonia', 
-    'Mohlala', 
-    'NKOCHHAR', 
-    '515.123.4568', 
-    TO_DATE('21-09-2005', 'dd-MM-yyyy'), 
-    'AD_VP', 
-    17000, 
-    NULL, 
-    100, 
-    90
-  );
-INSERT INTO employees 
-VALUES 
-  (
-    102, 
-    'Bokang', 
-    'Ramakwe', 
-    'LDEHAAN', 
-    '515.123.4569', 
-    TO_DATE('13-01-2001', 'dd-MM-yyyy'), 
-    'AD_VP', 
-    17000, 
-    NULL, 
-    100, 
-    90
-  );
-INSERT INTO employees 
-VALUES 
-  (
-    103, 
-    'Mosa', 
-    'Mohlala', 
-    'AHUNOLD', 
-    '590.423.4567', 
-    TO_DATE('03-01-2006', 'dd-MM-yyyy'), 
-    'IT_PROG', 
-    9000, 
-    NULL, 
-    102, 
-    60
-  );
-  
-  INSERT INTO job_history 
-VALUES 
-  (
-    102, 
-    TO_DATE('13-01-2001', 'dd-MM-yyyy'), 
-    TO_DATE('24-07-2006', 'dd-MM-yyyy'), 
-    'IT_PROG', 
-    60
-  );
-INSERT INTO job_history 
-VALUES 
-  (
-    101, 
-    TO_DATE('21-09-1997', 'dd-MM-yyyy'), 
-    TO_DATE('27-10-2001', 'dd-MM-yyyy'), 
-    'AC_ACCOUNT', 
-    110
-  );
-INSERT INTO job_history 
-VALUES 
-  (
-    101, 
-    TO_DATE('28-10-2001', 'dd-MM-yyyy'), 
-    TO_DATE('15-03-2005', 'dd-MM-yyyy'), 
-    'AC_MGR', 
-    110
-  );
-INSERT INTO job_history 
-VALUES 
-  (
-    201, 
-    TO_DATE('17-02-2004', 'dd-MM-yyyy'), 
-    TO_DATE('19-12-2007', 'dd-MM-yyyy'), 
-    'MK_REP', 
-    20
-  );
+
+INSERT INTO participant VALUES
+(2, 'Elizabeth', 'Butler','0846544190', 4785),
+(4, 'Beth', 'Osborne', '0847383191', 4785),
+(6, 'Amanda', 'Mccoy',  '0834249591', 4785),
+(8, 'Morgan',  'Turner',  '0856056071',  2365),
+(10, 'Stephanie', 'Francis', '0825442311', 2365),
+(12, 'Benjamin', 'Kennedy', '0837281064', 9659),
+(14, 'Shannon', 'Cabrera', '0848847532', 9659),
+(16, 'Dalton', 'Flores', '0848847532', 9659),
+(18, 'Kim', 'Perry',  '0852709739', 5678),
+(20, 'Richard', 'Mason', '0839748952', 5678),
+(22, 'Diane', 'Brooks',  '0838767334', 5678),
+(24, 'Dominique', 'Hernandez', '0851908257', 1234),
+(26, 'Katherine', 'Garza', '0837809484', 1234),
+(28, 'Victoria', 'Scott', '0851953447', 1234);
+
+
+
+INSERT INTO course VALUES
+(10, 'International Law', 'ENG', 'F6', 156, '2019-12-27', TRUE,  5, 1234),
+(11, 'Neurosurgery', 'ENG', 'F1', 156, '2020-09-22',  TRUE, 3, 1234),
+(12, 'Labor Law', 'ENG', 'T5', 104, '2020-12-31', TRUE, 1, 9659),
+(13, 'Ethnochoreology', 'ENG', 'T2', 52, '2021-04-22', FALSE, 2, 4785),
+(14, 'Sociology', 'ENG', 'M4', 52, '2022-04-12', FALSE, 6, 5678),
+
+INSERT INTO takes_course VALUES
+(2, 10),
+(4, 10),
+(26, 13),
+(28, 14),
+(12, 12),
